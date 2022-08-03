@@ -1,0 +1,30 @@
+ ALGORITHM produit scalaire 
+ VAR
+     n : integer 
+    v1,v2 : array of integer [x,y ]
+ BEGIN
+   FUNCTION dot_product(v1,v2) : return_integer 
+   VAR
+    res : integer
+   BEGIN
+    res= v1[0]*v2[0] + v2[1]*v2[1]
+    RETURN res;
+   END
+
+   read (n)
+   FOR i FROM 0 TO n STEP 1  DO
+     read(v1[0],v1[1])
+     read(v2[0],v2[1])
+     ps= dot_product(v1,v2) 
+     IF (ps=0) THEN
+        write ("ortho")
+     ELSE write("non-ortho")
+     END_IF 
+   END_FOR
+
+
+ END
+
+
+
+    
